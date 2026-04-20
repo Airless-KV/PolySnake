@@ -6,6 +6,7 @@ using UnityEngine;
 // =========================================================================
 // COMPATIBILITY: OGApple is mainly used in VETA Version 1.X.X scripts.
 // NON COMPATIBLE SCRIPTS: not compatible with custom gravity or 3D sphere/ramp mechanics and other apple scripts that may be in the project.
+// =========================================================================
 
 // =========================================================================
 // NOTE: Other apple scripts SHOULD BE TURNED OFF multiple scrips will cause conflicts. To turn the 2D flat level back on w/ unityGravity remove the comment below.
@@ -25,7 +26,7 @@ public class OGApple : MonoBehaviour
 
         if (other.CompareTag("snakeHead_Player"))
         {
-            other.GetComponent<OGSnake>().Grow();
+            other.GetComponent<SnakeTailHandler>().Grow();
             RandomizePosition();
         }
     }

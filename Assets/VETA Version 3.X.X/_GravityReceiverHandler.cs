@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class GravityReceiverHandler : MonoBehaviour
 {
-    public PlanetGravityHandler myPlanet; // Drag the Planet here
-    public bool alignUpright = true; // True for the Head, False for the Tail
+    public PlanetGravityHandler myPlanet; 
+    public bool alignUpright = true; 
 
     private Rigidbody rb;
 

@@ -35,7 +35,7 @@ public class AppleHandler : MonoBehaviour
 
     //    if (other.CompareTag("snakeHead_Player"))
     //    {
-    //        other.GetComponent<OGSnakeTailHandler>().Grow(); 
+    //        other.GetComponent<SnakeTailHandler>().Grow(); 
     //        RandomizePosition();
     //    }
     //}
