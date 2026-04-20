@@ -25,30 +25,30 @@ using UnityEngine;
 // This script handles the behavior of the spheroid apple, including detecting when the snake eats it and randomizing its position.
 public class AppleHandler : MonoBehaviour
 {
-    //public Transform planet;
-    //public float planetRadius = 25f;
+    public Transform planet;
+    public float planetRadius = 50f;
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    Debug.Log("The apple was touched by: " + other.gameObject.name);
-
-
-    //    if (other.CompareTag("snakeHead_Player"))
-    //    {
-    //        other.GetComponent<SnakeTailHandler>().Grow(); 
-    //        RandomizePosition();
-    //    }
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("The apple was touched by: " + other.gameObject.name);
 
 
-    //private void RandomizePosition()
-    //{
+        if (other.CompareTag("snakeHead_Player"))
+        {
+            other.GetComponent<OGSnake>().Grow();
+            RandomizePosition();
+        }
+    }
 
-    //    Vector3 randomDirection = Random.onUnitSphere;
-    //    Vector3 spawnPoint = planet.position + (randomDirection * planetRadius);
 
-    //    transform.position = spawnPoint;
-    //    transform.up = randomDirection;
-    //}
+    private void RandomizePosition()
+    {
+
+        Vector3 randomDirection = Random.onUnitSphere;
+        Vector3 spawnPoint = planet.position + (randomDirection * planetRadius);
+
+        transform.position = spawnPoint;
+        transform.up = randomDirection;
+    }
 
 } 

@@ -19,26 +19,26 @@ using UnityEngine;
 // This script handles the behavior of the apple, including detecting when the snake eats it and randomizing its position.
 public class OGApple : MonoBehaviour
 {
-    // This method is called when another collider enters the trigger collider attached to the apple.
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("The apple was touched by: " + other.gameObject.name);
+    //// This method is called when another collider enters the trigger collider attached to the apple.
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    Debug.Log("The apple was touched by: " + other.gameObject.name);
 
-        if (other.CompareTag("snakeHead_Player"))
-        {
-            other.GetComponent<OGSnakeTailHandler>().Grow();
-            RandomizePosition();
-        }
-    }
+    //    if (other.CompareTag("snakeHead_Player"))
+    //    {
+    //        other.GetComponent<OGSnake>().Grow();
+    //        RandomizePosition();
+    //    }
+    //}
 
-    // This method will move the apple to a random position within a 20x20 area centered around the origin (0,0,0).
-    private void RandomizePosition()
-    {
+    //// This method will move the apple to a random position within a 20x20 area centered around the origin (0,0,0).
+    //private void RandomizePosition()
+    //{
 
-        float randomX = Random.Range(-10f, 10f);
-        float randomZ = Random.Range(-10f, 10f);
+    //    float randomX = Random.Range(-10f, 10f);
+    //    float randomZ = Random.Range(-10f, 10f);
 
-        // Move the apple. but keep the Y coordinate at 0 to stay on the ground
-        transform.position = new Vector3(randomX, 0f, randomZ);
-    }
+    //    // Move the apple. but keep the Y coordinate at 0 to stay on the ground
+    //    transform.position = new Vector3(randomX, 0f, randomZ);
+    //}
 }  
