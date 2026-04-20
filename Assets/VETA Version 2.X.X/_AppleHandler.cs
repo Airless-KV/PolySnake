@@ -8,17 +8,7 @@ using UnityEngine;
 // =========================================================================
 
 // =========================================================================
-// NOTE: Other apple scripts SHOULD BE TURNED OFF! multiple scrips will cause conflicts. To turn the 3D Sphere/Ramp math back on remove the comment below.
-// DO NOT REMOVE the other apple scripts. Just comment them out!
 // NOTE: Change the component name to match the snake tail handler you are using, if you switch to a different one.
-// =========================================================================
-
-// =========================================================================
-// CLARIFICATION: ON NEEDING TO COMMENT OUT OTHER APPLE SCRIPTS
-// If you have multiple Apple scripts in your project, they will all try to run at the same time and cause conflicts.
-// Unchecking a script in Unity only stops its frame-by-frame updates, but it does not disable its physics triggers.
-// Meaning the code still fires the exact millisecond something collides with it.
-// it is the developer decision to leave the other Apple scripts in the component list for reference, but they must be commented out to prevent conflicts.
 // =========================================================================
 
 
@@ -35,7 +25,7 @@ public class AppleHandler : MonoBehaviour
 
         if (other.CompareTag("snakeHead_Player"))
         {
-            other.GetComponent<OGSnake>().Grow();
+            other.GetComponent<OGSnakeTailHandler>().Grow();
             RandomizePosition();
         }
     }
