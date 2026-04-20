@@ -1,5 +1,13 @@
 using UnityEngine;
+// Version 1.1: Initial implementation of the planet gravity handler. 4/19/2026
 
+// =========================================================================
+// COMPATIBILITY: PlanetGravityHandler is mainly used in VETA Version 3.X.X scripts
+// NON COMPATIBLE SCRIPTS: OGApple, OGFauxGravityHandler, and other scripts that manage gravity in a different way.
+//=========================================================================
+
+
+// This script is responsible for simulating gravity towards the planet and aligning objects upright relative to the planet's surface.
 public class PlanetGravityHandler : MonoBehaviour
 {
     public float gravitySpeed = 9.8f;

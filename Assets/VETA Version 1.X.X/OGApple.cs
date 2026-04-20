@@ -26,7 +26,7 @@ public class OGApple : MonoBehaviour
 
         if (other.CompareTag("snakeHead_Player"))
         {
-            other.GetComponent<SnakeTailHandler>().Grow();
+            other.GetComponent<OGSnakeTailHandler>().Grow();
             RandomizePosition();
         }
     }

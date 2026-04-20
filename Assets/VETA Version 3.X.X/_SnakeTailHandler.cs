@@ -1,6 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
+// Version 2.5: second implementation of the snake tail handler, with improved movement and growth mechanics. 4/19/2026
 
+// =========================================================================
+// COMPATIBILITY: SnakeTailHandler is mainly used in VETA Version 3.X.X scripts
+// NON COMPATIBLE SCRIPTS: other snake tail handlers, and scripts that manage tail movement and growth in a different way.
+// =========================================================================
+
+// =========================================================================
+// NOTE: Make sure to change the component name in the Apple script's Grow() method when switching to a different snake tail handler script.
+// =========================================================================
+
+// This script is responsible for managing the snake's tail pieces, including their movement to follow the head and growth when eating apples.
+// It also includes improved mechanics to ensure smoother movement and prevent jittering.
 public class SnakeTailHandler : MonoBehaviour
 {
     public GameObject tailPrefab;

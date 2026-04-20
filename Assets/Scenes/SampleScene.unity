@@ -563,7 +563,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503166737}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fd73419f22171b4ca39658e21cdc1d5, type: 3}
   m_Name: 
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503166737}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58cdcc60797232444b956c8ea623cbf5, type: 3}
   m_Name: 
@@ -776,15 +776,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503166737}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1a0fb6040aaa2742a00a3477cad5787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SnakeTailHandler
-  tailPrefab: {fileID: 0}
+  tailPrefab: {fileID: 884001886}
   tailGap: 1.2
   moveSpeed: 10
-  myPlanet: {fileID: 0}
+  myPlanet: {fileID: 998115087}
   score: 0
 --- !u!1 &832575517
 GameObject:
