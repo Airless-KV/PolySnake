@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+// Status: Current Main.
+
 // Version 1.1: Initial implementation of the player input handling for the snake. 4/18/2026
 
 // =========================================================================
-// COMPATIBILITY: PlayerInputHandler is mainly used in VETA Version 2.X.X scripts.
+// COMPATIBILITY: PlayerInputHandler is mainly used in ALPHA Version 2.X.X scripts.
 // NON COMPATIBLE SCRIPTS: other player input handlers, and scripts that manage player input in a different way.
 // =========================================================================
 

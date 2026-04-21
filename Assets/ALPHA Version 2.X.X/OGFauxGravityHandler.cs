@@ -1,10 +1,12 @@
 using UnityEngine;
-// Version 1.?: Initial implementation of the faux gravity handler. 4/18/2026
+// Status: Testing and Debugging only.
 // Abbandoned for the use of _GravityReceiverHandler and _PlanetGravityHandler scripts for more control, but left in the project for reference. 4/19/2026
+
+// Version 1.?: Initial implementation of the faux gravity handler. 4/18/2026
 // Version 1.?.1: Cleaned up, commented, renamed, and refactored version of the original FauxGravityHandler script. 4/19/2026
 
 // =========================================================================
-// COMPATIBILITY: OGFauxGravityHandler is mainly used in VETA Version 2.X.X scripts
+// COMPATIBILITY: OGFauxGravityHandler is mainly used in ALPHA Version 2.X.X scripts
 // NON COMPATIBLE SCRIPTS: OGApple
 // =========================================================================
 

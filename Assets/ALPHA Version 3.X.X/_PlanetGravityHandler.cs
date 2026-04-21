@@ -1,10 +1,13 @@
 using UnityEngine;
+// Status: Testing and Debugging only.
+// Abbandoned for the use of _GravityReceiverHandler script for better modularity and control, but left in the project for reference. 4/21/2026
+
 // Version 1.1: Initial implementation of the planet gravity handler. 4/19/2026
 
 // =========================================================================
-// COMPATIBILITY: PlanetGravityHandler is mainly used in VETA Version 3.X.X scripts
+// COMPATIBILITY: PlanetGravityHandler is mainly used in ALPHA Version 3.X.X scripts
 // NON COMPATIBLE SCRIPTS: OGApple, OGFauxGravityHandler, and other scripts that manage gravity in a different way.
-//=========================================================================
+// =========================================================================
 
 
 // This script is responsible for simulating gravity towards the planet and aligning objects upright relative to the planet's surface.

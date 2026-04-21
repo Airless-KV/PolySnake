@@ -1,17 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
-// Version 1.?: Initial implementation of the snake tail handler, managing tail movement and growth when eating apples. 4/18/2026
-// Abbandoned for the use of newer _SnakeTailHandler script for better looking movement, but left in the project for reference. 4/19/2026
-// Version 1.?.1: Cleaned up, commented, renamed, and refactored version of the original OGSnakeTailHandler script. 4/19/2026
+// Status: Testing and Debugging only.
+// Abbandoned for the use of newer 1GSnakeTailHandler script for better looking movement, but left in the project for reference. 4/19/2026
+
+// Version 1.1: Initial implementation of the snake tail handler, managing tail movement and growth when eating apples. 4/18/2026
+// V-1.2 [Updated - 4/21/2026] - changed so that 2D planes work and in the abbsesnce of a planet reference, the loop will not break.  
+// Version 1.2.1: Cleaned up, commented, renamed, and refactored version of the original OGSnakeTailHandler script. 4/21/2026
 
 // =========================================================================
-// COMPATIBILITY: OGSnakeTailHandler is mainly used in VETA Version 2.X.X scripts
+// COMPATIBILITY: OGSnakeTailHandler is mainly used in ALPHA Version 2.X.X scripts
 // NON COMPATIBLE SCRIPTS: other snake tail handlers, and scripts that manage tail movement and growth in a different way.
-// =========================================================================
-
-// =========================================================================
-// NOTE: Make sure to change the component name in the Apple script's Grow() method when switching to a different snake tail handler script.
 // =========================================================================
 
 
@@ -34,8 +33,6 @@ public class OGSnakeTailHandler : MonoBehaviour
     // Moves the tail pieces to follow the head, while keeping them aligned with the planet's gravity
     void FixedUpdate()
     {
-        if (planet == null) return;
-
         for (int i = 1; i < snakeBody.Count; i++)
         {
             Rigidbody currentSegment = snakeBody[i];
@@ -49,8 +46,18 @@ public class OGSnakeTailHandler : MonoBehaviour
                 Vector3 targetPos = Vector3.MoveTowards(currentSegment.position, previousSegment.position, moveSpeed * Time.fixedDeltaTime);
                 currentSegment.MovePosition(targetPos);
 
-                // Look at the piece in front, but keep 'Up' aligned with the planet!
-                Vector3 segmentGravityDir = (planet.position - currentSegment.position).normalized;
+                Vector3 segmentGravityDir;
+
+                if (planet != null)
+                {
+                    segmentGravityDir = (planet.position - currentSegment.position).normalized;
+                }
+                else
+                {
+                    segmentGravityDir = Vector3.down;
+                }
+
+                // Calculate the forward direction based on the previous segment's position and current segment's position.
                 Vector3 forwardDir = (previousSegment.position - currentSegment.position).normalized;
                 currentSegment.MoveRotation(Quaternion.LookRotation(forwardDir, -segmentGravityDir));
             }

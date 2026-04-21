@@ -2,17 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-// Version 1.?: Initial implementation of the snake movement, growth, and collision detection. 4/18/2026
+// Status: Testing and Debugging only.
 // Abbandoned in favor of splitting the functionality into separate scripts, but keeping this here for reference. 4/18/2026
+
+// Version 1.?: Initial implementation of the snake movement, growth, and collision detection. 4/18/2026
 // Version 1.?.1: Cleaned up, commented, renamed, and refactored version of the original Snake script. 4/19/2026
 
 // =========================================================================
-// COMPATIBILITY: OGSnake is mainly used in VETA Version 1.X.X scripts.
+// COMPATIBILITY: OGSnake is mainly used in ALPHA Version 1.X.X scripts.
 // NON COMPATIBLE SCRIPTS: not compatible with other player input, tail handler, and health/collision scripts.
-// =========================================================================
-
-// =========================================================================
-// NOTE: Make sure to change the component name in the Apple script's Grow() method when switching to a different snake tail handler script.
 // =========================================================================
 
 

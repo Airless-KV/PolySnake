@@ -702,7 +702,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219472934}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26573df7be9aa454895aeea64a754a9a, type: 3}
   m_Name: 
@@ -823,7 +823,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219472934}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d733f6ce4f3a804a912bb3fb4cc3fba, type: 3}
   m_Name: 
@@ -1098,10 +1098,10 @@ GameObject:
   - component: {fileID: 1368085078}
   - component: {fileID: 1368085077}
   - component: {fileID: 1368085075}
-  - component: {fileID: 1368085082}
   - component: {fileID: 1368085085}
-  - component: {fileID: 1368085084}
   - component: {fileID: 1368085083}
+  - component: {fileID: 1368085082}
+  - component: {fileID: 1368085086}
   m_Layer: 0
   m_Name: snakeHead_Player
   m_TagString: snakeHead_Player
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368085074}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26573df7be9aa454895aeea64a754a9a, type: 3}
   m_Name: 
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368085074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d733f6ce4f3a804a912bb3fb4cc3fba, type: 3}
   m_Name: 
@@ -1274,23 +1274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ae60930bcac67429a6188982b9e99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthAndCollisionHandler
---- !u!114 &1368085084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368085074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beaa938061e9fc74ab203bd559a56ccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OGSnakeTailHandler
-  tailPrefab: {fileID: 1219472934}
-  tailGap: 1.2
-  moveSpeed: 11
-  planet: {fileID: 89477221}
-  score: 0
 --- !u!114 &1368085085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1305,6 +1288,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
   moveSpeed: 10
   rotationSpeed: 150
+--- !u!114 &1368085086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368085074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a0fb6040aaa2742a00a3477cad5787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnakeTailHandler
+  tailPrefab: {fileID: 1219472934}
+  tailGap: 1.1
+  moveSpeed: 15
+  myPlanet: {fileID: 89477216}
+  score: 0
 --- !u!1 &1577041481
 GameObject:
   m_ObjectHideFlags: 0

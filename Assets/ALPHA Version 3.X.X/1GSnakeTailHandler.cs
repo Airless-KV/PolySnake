@@ -1,19 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
-// Version 2.5: second implementation of the snake tail handler, with improved movement and growth mechanics. 4/19/2026
+// Status: Testing and Debugging only.
+// Abbandoned for the use of newer _SnakeTailHandler script for its raycast-based movement and improved mechanics, but left in the project for reference. 4/21/2026
+
+// Version 2.1: second implementation of the snake tail handler, with improved movement and growth mechanics. 4/19/2026
+// V-2.2 [Updated - 4/21/2026] - changed so that 2D planes work and in the abbsesnce of a planet reference, the loop will not break.
 
 // =========================================================================
-// COMPATIBILITY: SnakeTailHandler is mainly used in VETA Version 3.X.X scripts
+// COMPATIBILITY: SnakeTailHandler is mainly used in ALPHA Version 3.X.X scripts
 // NON COMPATIBLE SCRIPTS: other snake tail handlers, and scripts that manage tail movement and growth in a different way.
 // =========================================================================
 
-// =========================================================================
-// NOTE: Make sure to change the component name in the Apple script's Grow() method when switching to a different snake tail handler script.
-// =========================================================================
 
 // This script is responsible for managing the snake's tail pieces, including their movement to follow the head and growth when eating apples.
 // It also includes improved mechanics to ensure smoother movement and prevent jittering.
-public class SnakeTailHandler : MonoBehaviour
+public class IGSnakeTailHandler : MonoBehaviour
 {
     public GameObject tailPrefab;
     public float tailGap = 1.2f;
@@ -31,7 +32,6 @@ public class SnakeTailHandler : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (myPlanet == null) return;
 
         for (int i = 1; i < snakeBody.Count; i++)
         {
@@ -42,7 +42,18 @@ public class SnakeTailHandler : MonoBehaviour
 
             // 1. Look at the piece in front (Steering)
             Vector3 directionToFront = (previousSegment.position - currentSegment.position).normalized;
-            Vector3 segmentGravityDir = (myPlanet.transform.position - currentSegment.position).normalized;
+            Vector3 segmentGravityDir;
+
+            if (myPlanet != null)
+            {
+                // If true: Point towards the planet
+                segmentGravityDir = (myPlanet.transform.position - currentSegment.position).normalized;
+            }
+            else
+            {
+                // If false: Point straight down
+                segmentGravityDir = Vector3.down;
+            }
 
             Quaternion targetRotation = Quaternion.LookRotation(directionToFront, -segmentGravityDir);
 
@@ -52,14 +63,10 @@ public class SnakeTailHandler : MonoBehaviour
             // 2. Drive Forward (Gas Pedal)
             if (distance > tailGap)
             {
-                // Calculate exactly how many inches we need to move to fix the gap
                 float distanceToClose = distance - tailGap;
 
-                // Mathf.Min guarantees we NEVER drive faster than distanceToClose. 
-                // This is the magic bullet that completely stops all jitter!
                 float moveStep = Mathf.Min(moveSpeed * Time.fixedDeltaTime, distanceToClose);
 
-                // CRITICAL: We move along our OWN forward direction, driving exactly where we are looking!
                 Vector3 forwardMove = currentSegment.transform.forward * moveStep;
                 currentSegment.MovePosition(currentSegment.position + forwardMove);
             }

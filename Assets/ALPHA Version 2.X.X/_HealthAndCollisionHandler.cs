@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+// Status: Current Main.
+
 // Version 1.1: Initial implementation of the health and collision handling for the snake. 4/18/2026
 
 // =========================================================================
-// COMPATIBILITY: HealthAndCollisionHandler is mainly used in VETA Version 2.X.X scripts.
+// COMPATIBILITY: HealthAndCollisionHandler is mainly used in ALPHA Version 2.X.X scripts.
 // NON COMPATIBLE SCRIPTS: other health and collision handlers, and scripts that manage collisions and health in a different way.a
 // =========================================================================
 
