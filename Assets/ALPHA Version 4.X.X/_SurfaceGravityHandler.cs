@@ -17,6 +17,10 @@ public class SurfaceGravity : MonoBehaviour
     public LayerMask groundLayer; 
     public bool alignUpright = true;
 
+    public float maxAlignSpeed = 25f;
+    public float minAlignSpeed = 2f;
+
+    public float edgeWrapSpeed = 180f;
     private Rigidbody rb;
 
     void Start()
@@ -35,17 +39,31 @@ public class SurfaceGravity : MonoBehaviour
             // 1. Pull the object tightly to the ramp/floor
             rb.AddForce(-hit.normal * gravityForce, ForceMode.Acceleration);
 
+            
             // 2. Tilt the object to perfectly match the angle of the hill
             if (alignUpright)
             {
+                float angleDifference = Vector3.Angle(transform.up, hit.normal);
+
+                float currentAlignSpeed = Mathf.Lerp(minAlignSpeed, maxAlignSpeed, angleDifference / 45f);
+
                 Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, 15f * Time.fixedDeltaTime));
+
+                // Use our new dynamic 'currentAlignSpeed' instead of the hardcoded 15f!
+                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, currentAlignSpeed * Time.fixedDeltaTime));
             }
         }
         else
         {
             // If we drive off a cliff, fall straight down like normal gravity
             rb.AddForce(Vector3.down * gravityForce, ForceMode.Acceleration);
+
+            if (alignUpright)
+            {
+                // We multiply our current rotation by a new Euler angle to tilt it forward over time.
+                Quaternion pitchDown = rb.rotation * Quaternion.Euler(edgeWrapSpeed * Time.fixedDeltaTime, 0f, 0f);
+                rb.MoveRotation(pitchDown);
+            }
         }
     }
 }

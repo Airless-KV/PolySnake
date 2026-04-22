@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 // Status: Preliminary Testing and Debugging.
 
-// Version 3.0: Initial implementation of the snake tail handler, managing tail movement and growth when eating apples. 4/21/2026
+// Version 3.1: Initial implementation of the snake tail handler, managing tail movement and growth when eating apples. 4/21/2026
+// V-3.2 [Updated - 4/22/2026] - changed so that when the snake jumps a cliff the snake tilts downwards instead of upwards.
 
 // =========================================================================
 // COMPATIBILITY: SnakeTailHandler is mainly used in ALPHA Version 4.X.X scripts
