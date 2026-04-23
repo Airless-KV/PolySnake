@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 // Version 3.1: Initial implementation of the snake tail handler, managing tail movement and growth when eating apples. 4/21/2026
 // V-3.2 [Updated - 4/22/2026] - changed so that when the snake jumps a cliff the snake tilts downwards instead of upwards.
+// V-3.3 [Updated - 4/23/2026] - changed the movement method to use a raycast-based position history system,
+// V-3.4 [Updated - 4/23/2026] - changed to history system to use a distance-based method instead of a time-based method.
 
 // =========================================================================
 // COMPATIBILITY: SnakeTailHandler is mainly used in ALPHA Version 4.X.X scripts
@@ -17,9 +19,13 @@ public class SnakeTailHandler : MonoBehaviour
 {
     public GameObject tailPrefab;
     public float tailGap = 1.2f;
-    public float moveSpeed = 15f;
+
+    private List<Vector3> positionHistory = new List<Vector3>();
+    private List<Quaternion> rotationHistory = new List<Quaternion>();
 
     private List<Rigidbody> snakeBody = new List<Rigidbody>();
+    private List<GameObject> tailPieces = new List<GameObject>();
+
     public int score = 0;
 
     void Awake()
@@ -29,44 +35,55 @@ public class SnakeTailHandler : MonoBehaviour
 
     void FixedUpdate()
     {
-        for (int i = 1; i < snakeBody.Count; i++)
+        positionHistory.Insert(0, transform.position);
+        rotationHistory.Insert(0, transform.rotation);
+
+        float distanceTracker = 0f;
+        int historyIndex = 0;
+
+        for (int i = 0; i < tailPieces.Count; i++)
         {
-            Rigidbody currentSegment = snakeBody[i];
-            Rigidbody previousSegment = snakeBody[i - 1];
-
-            float distance = Vector3.Distance(currentSegment.position, previousSegment.position);
-
-            // 1. Steer towards the piece in front
-            Vector3 directionToFront = (previousSegment.position - currentSegment.position).normalized;
-            Vector3 flatDirection = Vector3.ProjectOnPlane(directionToFront, currentSegment.transform.up).normalized;
-
-            if (flatDirection != Vector3.zero)
+            while (historyIndex < positionHistory.Count - 1 && distanceTracker < tailGap)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(flatDirection, currentSegment.transform.up);
-                currentSegment.MoveRotation(Quaternion.Slerp(currentSegment.rotation, targetRotation, moveSpeed * Time.fixedDeltaTime));
+                distanceTracker += Vector3.Distance(positionHistory[historyIndex], positionHistory[historyIndex + 1]);
+                historyIndex++;
             }
-            // 2. Drive Forward (Gas Pedal)
-            if (distance > tailGap)
-            {
-                float distanceToClose = distance - tailGap;
-                float moveStep = Mathf.Min(moveSpeed * Time.fixedDeltaTime, distanceToClose);
 
-                // Drive forward along the ramp
-                Vector3 forwardMove = currentSegment.transform.forward * moveStep;
-                currentSegment.MovePosition(currentSegment.position + forwardMove);
+            tailPieces[i].transform.position = positionHistory[historyIndex];
+            tailPieces[i].transform.rotation = rotationHistory[historyIndex];
+
+            distanceTracker = 0f;
+        }
+
+        if (positionHistory.Count > 0 && historyIndex < positionHistory.Count - 1)
+        {
+            int buffer = 10;
+            if (positionHistory.Count > historyIndex + buffer)
+            {
+                positionHistory.RemoveRange(historyIndex + buffer, positionHistory.Count - (historyIndex + buffer));
+                rotationHistory.RemoveRange(historyIndex + buffer, rotationHistory.Count - (historyIndex + buffer));
             }
         }
+
     }
 
     public void Grow()
     {
-        if (snakeBody.Count == 0) snakeBody.Add(GetComponent<Rigidbody>());
+        Vector3 spawnPos;
+        Quaternion spawnRot;
 
-        Rigidbody lastSegment = snakeBody[snakeBody.Count - 1];
-        Vector3 spawnPosition = lastSegment.position - lastSegment.transform.forward * tailGap;
-
-        GameObject newTail = Instantiate(tailPrefab, spawnPosition, lastSegment.rotation);
-        snakeBody.Add(newTail.GetComponent<Rigidbody>());
+        if (positionHistory.Count > 0)
+        {
+            spawnPos = positionHistory[positionHistory.Count - 1];
+            spawnRot = rotationHistory[rotationHistory.Count - 1];
+        }
+        else
+        {
+            spawnPos = transform.position;
+            spawnRot = transform.rotation;
+        }
+        GameObject newTail = Instantiate(tailPrefab, spawnPos, spawnRot);
+        tailPieces.Add(newTail);
 
         score++;
         Debug.Log("Apple eaten! Current Score: " + score);

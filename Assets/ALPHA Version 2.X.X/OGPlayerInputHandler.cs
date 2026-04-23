@@ -11,7 +11,7 @@ using UnityEngine.InputSystem;
 
 
 // This script handles the player's input for controlling the snake's movement, allowing the player to steer left and right while the snake always moves forward.
-public class PlayerInputHandler : MonoBehaviour
+public class OGPlayerInputHandler : MonoBehaviour
 {
     public float moveSpeed = 10f;
     public float rotationSpeed = 100f;

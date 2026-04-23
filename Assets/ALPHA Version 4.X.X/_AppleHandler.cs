@@ -2,6 +2,8 @@ using UnityEngine;
 // Status: Preliminary Testing and Debugging.
 
 // Version 3.1: Initial implementation of the Apple behavior, including random repositioning on the ground when collected. 4/21/2026
+// V-3.2 [Updated - 4/23/2026] - changed the randomization method to use the raycasting from deep space to the center of the geometry,
+// which allows it to be used on more complex surfaces like ramps and hills, instead of just flat ground.
 
 // =========================================================================
 // COMPATIBILITY: Apple is mainly used in ALPHA Version 4.X.X scripts.
@@ -12,8 +14,10 @@ using UnityEngine;
 // This script handles the behavior of the apple, including detecting when the snake eats it and randomizing its position on the ground.
 public class Apple : MonoBehaviour
 {
-    public float spawnAreaLimit = 40f; 
-    public LayerMask groundLayer;      
+    public Transform geometryCenter;
+
+    public float orbitRadius = 200f;
+    public LayerMask groundLayer;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,20 +48,28 @@ public class Apple : MonoBehaviour
 
     private void RandomizePosition()
     {
-        // 1. Pick a random spot from a bird's eye view
-        float randomX = Random.Range(-spawnAreaLimit, spawnAreaLimit);
-        float randomZ = Random.Range(-spawnAreaLimit, spawnAreaLimit);
-
-        // 2. Go high up in the sky at that spot
-        Vector3 skyPosition = new Vector3(randomX, 100f, randomZ);
-
-        // 3. Shoot a laser straight down
-        RaycastHit hit;
-        if (Physics.Raycast(skyPosition, Vector3.down, out hit, 200f, groundLayer))
+        if (geometryCenter == null)
         {
-            // If we hit the ground/ramp, move the apple exactly to the surface and stand it upright!
-            transform.position = hit.point + new Vector3(0, 0.5f, 0); // 0.5f lifts it slightly off the dirt
+            Debug.LogError("Apple script needs a Geometry Center assigned to know where to spawn!");
+            return;
+        }
+
+        Vector3 randomDirection = Random.onUnitSphere;
+
+        Vector3 deepSpacePos = geometryCenter.position + (randomDirection * orbitRadius);
+
+        RaycastHit hit;
+        // The ray points in the exact opposite direction (-randomDirection)
+        if (Physics.Raycast(deepSpacePos, -randomDirection, out hit, orbitRadius * 2f, groundLayer))
+        {
+            transform.position = hit.point + (hit.normal * 0.5f);
+
             transform.up = hit.normal;
+        }
+        else
+        {
+            // Failsafe: If the ray somehow misses completely, try again instantly!
+            RandomizePosition();
         }
     }
 }
