@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 // Status: Current Main.
 
 // Version 1.1: Initial implementation of the health and collision handling for the snake. 4/18/2026
+// V-1.2 [Updated - 4/24/2026] - fixed a bug where the self-collision would not trigger, and added an optional failsafe to catch wall collisions
+// that are triggers instead of solid objects, just in case you ever want to make your walls into triggers later on.
 
 // =========================================================================
 // COMPATIBILITY: HealthAndCollisionHandler is mainly used in ALPHA Version 2.X.X scripts.
@@ -17,7 +19,6 @@ public class HealthAndCollisionHandler : MonoBehaviour
 
     void Start()
     {
-        // Grab the Tail Manager script so we can talk to it
         tailManager = GetComponent<SnakeTailHandler>();
     }
 
@@ -25,21 +26,29 @@ public class HealthAndCollisionHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("wallCollision_Death"))
         {
-            Die();
-        }
-        else if (collision.gameObject.CompareTag("snakeBodyColilision_Death"))
-        {
-            // Ask the Tail Manager if this was a valid kill-shot
-            if (tailManager != null && tailManager.IsSelfCollision(collision.gameObject))
-            {
-                Die();
-            }
+            Die("Wall");
         }
     }
 
-    private void Die()
+    // 2. THIS CATCHES GHOST OBJECTS (Your new IsTrigger Tail Pieces)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Game Over! You hit a " + gameObject.name);
+        // 1. CHECK THE TAIL (No Tags Required!)
+        if (tailManager != null && tailManager.IsSelfCollision(other.gameObject))
+        {
+            Die("Tail");
+            return;
+        }
+        // 2. CHECK FOR GHOST HAZARDS
+        if (other.gameObject.CompareTag("wallCollision_Death"))
+        {
+            Die("Wall");
+        }
+    }
+
+    private void Die(string causeOfDeath)
+    {
+        Debug.Log("Game Over! The snake crashed into a " + causeOfDeath);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 // V-3.2 [Updated - 4/22/2026] - changed so that when the snake jumps a cliff the snake tilts downwards instead of upwards.
 // V-3.3 [Updated - 4/23/2026] - changed the movement method to use a raycast-based position history system,
 // V-3.4 [Updated - 4/23/2026] - changed to history system to use a distance-based method instead of a time-based method.
-
+// V-3.5 [Updated - 4/24/2026] - fixed a bug where the IsSelfCollision would not trigger.
 // =========================================================================
 // COMPATIBILITY: SnakeTailHandler is mainly used in ALPHA Version 4.X.X scripts
 // NON COMPATIBLE SCRIPTS: other snake tail handlers, and scripts that manage tail movement and growth in a different way.
@@ -26,7 +26,7 @@ public class SnakeTailHandler : MonoBehaviour
     private List<Rigidbody> snakeBody = new List<Rigidbody>();
     private List<GameObject> tailPieces = new List<GameObject>();
 
-    public int score = 0;
+    
 
     void Awake()
     {
@@ -82,15 +82,49 @@ public class SnakeTailHandler : MonoBehaviour
             spawnPos = transform.position;
             spawnRot = transform.rotation;
         }
+
         GameObject newTail = Instantiate(tailPrefab, spawnPos, spawnRot);
         tailPieces.Add(newTail);
 
-        score++;
-        Debug.Log("Apple eaten! Current Score: " + score);
+        //  send score event instead of storing it here
+        if (ScoreManager.Instance != null)
+            ScoreManager.Instance.AddScore(1);
+    }
+
+    [Header("Performance Test")]
+    [Tooltip("Check this box to automatically grow the snake over time.")]
+    public bool autoGrowTest = false;
+    [Tooltip("How many seconds between each automatic growth.")]
+    public float growInterval = 1f;
+
+    private float growTimer = 0f;
+    void Update()
+    {
+        // Only run the timer if the checkbox is ticked in the Inspector
+        if (autoGrowTest)
+        {
+            growTimer += Time.deltaTime; // Time.deltaTime counts up in real-world seconds
+
+            if (growTimer >= growInterval)
+            {
+                Grow();          // Call your existing Grow function!
+                growTimer = 0f;  // Reset the clock for the next piece
+            }
+        }
     }
 
     public bool IsSelfCollision(GameObject hitObject)
     {
-        return (snakeBody.Count > 1 && hitObject != snakeBody[1].gameObject);
+        // Check if the object we hit is actually in our tail list
+        if (!tailPieces.Contains(hitObject)) return false;
+
+        // Ignore the first 3 pieces (the neck/shoulders) to prevent accidental instant-death on tight turns
+        for (int i = 0; i < Mathf.Min(3, tailPieces.Count); i++)
+        {
+            if (hitObject == tailPieces[i]) return false;
+        }
+
+        // If it's a tail piece, and it's NOT one of the first 3, it's a lethal hit!
+        return true;
     }
 }
