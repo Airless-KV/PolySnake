@@ -1,0 +1,432 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kahrd\\PolySnake\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\beta version 1.x.x\\b1-mainapplehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\beta version 1.x.x\\b1-mainapplehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\beta version 1.x.x\\b1-mainsnaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\beta version 1.x.x\\b1-mainsnaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\beta version 1.x.x\\b1-mainapplcompasshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\beta version 1.x.x\\b1-mainapplcompasshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\beta version 1.x.x\\b1-mainhealthandcollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\beta version 1.x.x\\b1-mainhealthandcollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\beta version 1.x.x\\b1-mainsurfacegravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\beta version 1.x.x\\b1-mainsurfacegravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 4.x.x\\_playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 4.x.x\\_playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|c:\\users\\kahrd\\polysnake\\assets\\beta version 1.x.x\\b1-mainplayerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\beta version 1.x.x\\b1-mainplayerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 1.x.x\\ogapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 1.x.x\\ogapple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 4.x.x\\_applehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 4.x.x\\_applehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 4.x.x\\scoreboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 4.x.x\\scoreboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 4.x.x\\_snaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 4.x.x\\_snaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 4.x.x\\_surfacegravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 4.x.x\\_surfacegravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 3.x.x\\_gravityreceiverhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 3.x.x\\_gravityreceiverhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 3.x.x\\1gsnaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 3.x.x\\1gsnaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 3.x.x\\_planetgravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 3.x.x\\_planetgravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 2.x.x\\ogapplehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 2.x.x\\ogapplehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 2.x.x\\_aaplcompasshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 2.x.x\\_aaplcompasshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 2.x.x\\_healthandcollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 2.x.x\\_healthandcollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 2.x.x\\ogsnaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 2.x.x\\ogsnaketailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 2.x.x\\ogplayerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 2.x.x\\ogplayerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 2.x.x\\ogfauxgravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 2.x.x\\ogfauxgravityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|C:\\Users\\Kahrd\\PolySnake\\assets\\alpha version 1.x.x\\ogsnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56F399B6-D9F6-4711-9952-562CEB220D40}|Assembly-CSharp.csproj|solutionrelative:assets\\alpha version 1.x.x\\ogsnake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "B1-MainAppleHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainAppleHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\BETA Version 1.X.X\\B1-MainAppleHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainAppleHandler.cs",
+              "RelativeToolTip": "Assets\\BETA Version 1.X.X\\B1-MainAppleHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T08:08:42.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "B1-MainHealthAndCollisionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainHealthAndCollisionHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\BETA Version 1.X.X\\B1-MainHealthAndCollisionHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainHealthAndCollisionHandler.cs",
+              "RelativeToolTip": "Assets\\BETA Version 1.X.X\\B1-MainHealthAndCollisionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:58:15.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "B1-MainAPPLCompassHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainAPPLCompassHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\BETA Version 1.X.X\\B1-MainAPPLCompassHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainAPPLCompassHandler.cs",
+              "RelativeToolTip": "Assets\\BETA Version 1.X.X\\B1-MainAPPLCompassHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:53:14.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "B1-MainSurfaceGravityHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainSurfaceGravityHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\BETA Version 1.X.X\\B1-MainSurfaceGravityHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainSurfaceGravityHandler.cs",
+              "RelativeToolTip": "Assets\\BETA Version 1.X.X\\B1-MainSurfaceGravityHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:48:36.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "B1-MainSnakeTailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainSnakeTailHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\BETA Version 1.X.X\\B1-MainSnakeTailHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainSnakeTailHandler.cs",
+              "RelativeToolTip": "Assets\\BETA Version 1.X.X\\B1-MainSnakeTailHandler.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAgwHMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:48:35.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "B1-MainPlayerInputHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainPlayerInputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\BETA Version 1.X.X\\B1-MainPlayerInputHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\BETA Version 1.X.X\\B1-MainPlayerInputHandler.cs",
+              "RelativeToolTip": "Assets\\BETA Version 1.X.X\\B1-MainPlayerInputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:48:33.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ScoreBoard.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\ScoreBoard.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 4.X.X\\ScoreBoard.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\ScoreBoard.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 4.X.X\\ScoreBoard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:22:09.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_AppleHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_AppleHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 4.X.X\\_AppleHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_AppleHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 4.X.X\\_AppleHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:22:08.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_SnakeTailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_SnakeTailHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 4.X.X\\_SnakeTailHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_SnakeTailHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 4.X.X\\_SnakeTailHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:22:07.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_PlayerInputHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_PlayerInputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 4.X.X\\_PlayerInputHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_PlayerInputHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 4.X.X\\_PlayerInputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:22:06.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_SurfaceGravityHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_SurfaceGravityHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 4.X.X\\_SurfaceGravityHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 4.X.X\\_SurfaceGravityHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 4.X.X\\_SurfaceGravityHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:22:04.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "1GSnakeTailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 3.X.X\\1GSnakeTailHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 3.X.X\\1GSnakeTailHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 3.X.X\\1GSnakeTailHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 3.X.X\\1GSnakeTailHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:21:50.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_GravityReceiverHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 3.X.X\\_GravityReceiverHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 3.X.X\\_GravityReceiverHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 3.X.X\\_GravityReceiverHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 3.X.X\\_GravityReceiverHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:21:49.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_PlanetGravityHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 3.X.X\\_PlanetGravityHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 3.X.X\\_PlanetGravityHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 3.X.X\\_PlanetGravityHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 3.X.X\\_PlanetGravityHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:21:47.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OGAppleHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGAppleHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 2.X.X\\OGAppleHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGAppleHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 2.X.X\\OGAppleHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:04:55.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_AAPLCompassHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\_AAPLCompassHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 2.X.X\\_AAPLCompassHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\_AAPLCompassHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 2.X.X\\_AAPLCompassHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T01:04:54.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_HealthAndCollisionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\_HealthAndCollisionHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 2.X.X\\_HealthAndCollisionHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\_HealthAndCollisionHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 2.X.X\\_HealthAndCollisionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:19:39.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OGSnakeTailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGSnakeTailHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 2.X.X\\OGSnakeTailHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGSnakeTailHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 2.X.X\\OGSnakeTailHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:19:33.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OGPlayerInputHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGPlayerInputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 2.X.X\\OGPlayerInputHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGPlayerInputHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 2.X.X\\OGPlayerInputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:19:30.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OGFauxGravityHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGFauxGravityHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 2.X.X\\OGFauxGravityHandler.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 2.X.X\\OGFauxGravityHandler.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 2.X.X\\OGFauxGravityHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T01:04:55.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OGApple.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 1.X.X\\OGApple.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 1.X.X\\OGApple.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 1.X.X\\OGApple.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 1.X.X\\OGApple.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:19:11.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OGSnake.cs",
+              "DocumentMoniker": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 1.X.X\\OGSnake.cs",
+              "RelativeDocumentMoniker": "Assets\\ALPHA Version 1.X.X\\OGSnake.cs",
+              "ToolTip": "C:\\Users\\Kahrd\\PolySnake\\Assets\\ALPHA Version 1.X.X\\OGSnake.cs",
+              "RelativeToolTip": "Assets\\ALPHA Version 1.X.X\\OGSnake.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-02T07:19:09.74Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
