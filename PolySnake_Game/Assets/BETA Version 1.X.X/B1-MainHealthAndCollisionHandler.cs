@@ -37,6 +37,14 @@ public class MainHealthAndCollisionHandler : MonoBehaviour
     private void Die(string causeOfDeath)
     {
         Debug.Log("Game Over! The snake crashed into a " + causeOfDeath);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+        if (GameModeController.Instance != null)
+        {
+            GameModeController.Instance.EndGame("Crashed into " + causeOfDeath);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

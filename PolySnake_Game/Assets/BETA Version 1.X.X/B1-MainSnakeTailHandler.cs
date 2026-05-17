@@ -109,4 +109,9 @@ public class MainSnakeTailHandler : MonoBehaviour
 
         return true;
     }
+
+    public int GetTailCount()
+    {
+        return tailPieces.Count;
+    }
 }

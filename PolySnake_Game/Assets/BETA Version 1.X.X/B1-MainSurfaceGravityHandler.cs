@@ -60,8 +60,10 @@ public class MainSurfaceGravityHandler : MonoBehaviour
                 Debug.DrawRay(transform.position, worldDir * rayLength, Color.green);
             }
 
+            float dynamicRayLength = Mathf.Max(rayLength, GameBootManager.CurrentMapSize);
+
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, worldDir, out hit, rayLength, groundLayer))
+            if (Physics.Raycast(transform.position, worldDir, out hit, dynamicRayLength, groundLayer))
             {
                 if (hit.distance < closestDistance)
                 {
@@ -74,7 +76,8 @@ public class MainSurfaceGravityHandler : MonoBehaviour
 
         if (hitFound)
         {
-            rb.AddForce(-bestNormal * gravityForce, ForceMode.Acceleration);
+            float dynamicGravity = gravityForce * 10f; 
+            rb.AddForce(-bestNormal * dynamicGravity, ForceMode.Acceleration);
 
             if (alignUpright)
             {
@@ -87,7 +90,20 @@ public class MainSurfaceGravityHandler : MonoBehaviour
         }
         else
         {
-            rb.AddForce(Vector3.down * gravityForce, ForceMode.Acceleration);
+            Vector3 recoveryDirection = Vector3.down; // Default for flat maps
+            
+            if (GameBootManager.CurrentMapName.Contains("Sphere") || GameBootManager.CurrentMapName.Contains("Cube"))
+            {
+                recoveryDirection = (Vector3.zero - transform.position).normalized;
+            }
+
+            rb.AddForce(recoveryDirection * gravityForce * 2f, ForceMode.Acceleration);
+
+            if (alignUpright)
+            {
+                Quaternion targetRotation = Quaternion.FromToRotation(transform.up, -recoveryDirection) * transform.rotation;
+                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, maxAlignSpeed * Time.fixedDeltaTime));
+            }
         }
     }
 }

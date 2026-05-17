@@ -49,7 +49,10 @@ public class MainPlayerInputHandler : MonoBehaviour
             lastInputDirection = 0f;
         }
 
-        Vector3 forwardMove = transform.forward * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + forwardMove);
+        Vector3 forwardVelocity = transform.forward * moveSpeed;
+        
+        Vector3 verticalVelocity = Vector3.Project(rb.linearVelocity, transform.up);
+        
+        rb.linearVelocity = forwardVelocity + verticalVelocity;
     }
 }

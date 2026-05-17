@@ -32,7 +32,7 @@ public class MainApple : MonoBehaviour
         }
     }
 
-    private void RandomizePosition()
+    public void RandomizePosition()
     {
         if (geometryCenter == null)
         {
@@ -66,7 +66,8 @@ public class MainApple : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(rayOrigin, rayDirection, out hit, orbitRadius * 2f, groundLayer))
             {
-                transform.position = hit.point + (hit.normal * 0.5f);
+                float appleOffset = 0.6f;
+                transform.position = hit.point + (hit.normal * appleOffset);
                 transform.up = hit.normal;
                 return;
             }

@@ -1,9 +1,11 @@
 using UnityEngine;
 using TMPro;
 
-public class ScoreManager : MonoBehaviour
+// NOTE: This is an ALPHA-era leftover. The active ScoreManager is in BETA Version 1.X.X/ScoreManager.cs.
+// Renamed to avoid CS0101 duplicate class conflict.
+public class ScoreManager_Alpha : MonoBehaviour
 {
-    public static ScoreManager Instance;
+    public static ScoreManager_Alpha Instance;
 
     public TextMeshProUGUI scoreText;
 

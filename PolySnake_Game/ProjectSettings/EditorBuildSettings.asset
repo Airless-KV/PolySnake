@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TM1_MainTestScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/TM2_FlatTestScene.unity
+    guid: 556a23b8468c9db4dbb7e47b4ce11112
+  - enabled: 1
+    path: Assets/Scenes/TM3_SphereTestScene.unity
+    guid: e4dc5d0876a7c384a91444e434572c5d
+  - enabled: 1
+    path: Assets/Scenes/TM4_CubeTestScene.unity
+    guid: 1dc232427fcf92d478e0769d9e9dfa35
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 8d41c63b9d4e20741b228b58bcddb5a9, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: e38c4bd50c9c0514dabe2d748801f280, type: 2}
