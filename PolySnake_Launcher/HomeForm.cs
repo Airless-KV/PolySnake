@@ -97,7 +97,7 @@ namespace PolySnake_Launcher
         }
 
         // ─── Button click handlers ────────────────────────────────────────────────
-        private void BtnStartGame_Click(object sender, EventArgs e)
+        private void BtnStartGame_Click(object? sender, EventArgs e)
         {
             var settingsForm = new Form1();
             settingsForm.FormClosed += (s, args) => this.Show();
@@ -105,16 +105,15 @@ namespace PolySnake_Launcher
             this.Hide();
         }
 
-        private void BtnSettings_Click(object sender, EventArgs e)
+        private void BtnSettings_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Launcher settings coming soon!",
-                "Settings",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            var settingsForm = new SettingsForm();
+            settingsForm.FormClosed += (s, args) => this.Show();
+            settingsForm.Show();
+            this.Hide();
         }
 
-        private void BtnCredits_Click(object sender, EventArgs e)
+        private void BtnCredits_Click(object? sender, EventArgs e)
         {
             MessageBox.Show(
                 "PolySnake\n\nDeveloped by the Airless-KV Team.\n\nThanks for playing!",
@@ -123,7 +122,7 @@ namespace PolySnake_Launcher
                 MessageBoxIcon.None);
         }
 
-        private void BtnGitHub_Click(object sender, EventArgs e)
+        private void BtnGitHub_Click(object? sender, EventArgs e)
         {
             Process.Start(new ProcessStartInfo
             {

@@ -13,10 +13,12 @@ namespace PolySnake_Launcher
         public Form1()
         {
             InitializeComponent();
-
+            
             // ESC key closes settings and goes back (no title bar since window is borderless)
             this.KeyPreview = true;
             this.KeyDown += (s, e) => { if (e.KeyCode == Keys.Escape) this.Close(); };
+
+            resultsTimer = new System.Windows.Forms.Timer();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,13 +31,12 @@ namespace PolySnake_Launcher
             comboDifficulty.SelectedIndex = 1; // Default to Normal
 
             // Start listening for game results!
-            resultsTimer = new System.Windows.Forms.Timer();
             resultsTimer.Interval = 1000; // Check every 1 second
             resultsTimer.Tick += ResultsTimer_Tick;
             resultsTimer.Start();
         }
 
-        private void ResultsTimer_Tick(object sender, EventArgs e)
+        private void ResultsTimer_Tick(object? sender, EventArgs e)
         {
             string docsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string resultsPath = Path.Combine(docsPath, "SnakeGameResults.json");
@@ -49,7 +50,7 @@ namespace PolySnake_Launcher
                     string json = File.ReadAllText(resultsPath);
                     var result = JsonSerializer.Deserialize<GameResults>(json);
 
-                    // Delete the file so we don't read it twice
+                    // Delete the file
                     File.Delete(resultsPath);
 
                     // Force the Launcher to the front of the screen
@@ -66,7 +67,7 @@ namespace PolySnake_Launcher
         public class GameResults
         {
             public int FinalScore { get; set; }
-            public string Reason { get; set; }
+            public string? Reason { get; set; }
         }
 
         private void ApplyDarkMode(Control control)
@@ -100,9 +101,9 @@ namespace PolySnake_Launcher
             lblTargetSize.Visible = false;
             txtTargetSize.Visible = false;
 
-            string selectedMode = comboGameMode.SelectedItem?.ToString();
+            string? selectedMode = comboGameMode.SelectedItem?.ToString();
 
-            // Show only what's relevant for the selected game mode!
+            // Show only what's relevant for the selected game mode
             if (selectedMode == "Time Limit")
             {
                 lblTimeLimit.Visible = true;
@@ -113,7 +114,6 @@ namespace PolySnake_Launcher
                 lblTargetSize.Visible = true;
                 txtTargetSize.Visible = true;
             }
-            // If it's "Endurance", both stay hidden!
         }
 
         private void trackMapSize_Scroll(object sender, EventArgs e)
@@ -123,20 +123,20 @@ namespace PolySnake_Launcher
 
         private void comboDifficulty_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string diff = comboDifficulty.SelectedItem?.ToString();
+            string? diff = comboDifficulty.SelectedItem?.ToString();
             if (diff == "Easy")
             {
-                trackPlayerSpeed.Value = 10;
+                trackPlayerSpeed.Value = 5;
                 trackPlayerSpeed.Enabled = false;
             }
             else if (diff == "Normal")
             {
-                trackPlayerSpeed.Value = 20;
+                trackPlayerSpeed.Value = 10;
                 trackPlayerSpeed.Enabled = false;
             }
             else if (diff == "Hard")
             {
-                trackPlayerSpeed.Value = 30;
+                trackPlayerSpeed.Value = 20;
                 trackPlayerSpeed.Enabled = false;
             }
             else if (diff == "Custom")
@@ -162,6 +162,7 @@ namespace PolySnake_Launcher
             public bool IsEndurance { get; set; }
             public string TimeOfDay { get; set; } = "Day";
             public float PlayerSpeed { get; set; } = 20f;
+            public string Difficulty { get; set; } = "Normal";
         }
 
         private void btnLaunchGame_Click(object sender, EventArgs e)
@@ -181,7 +182,8 @@ namespace PolySnake_Launcher
                     TargetSize = int.TryParse(txtTargetSize.Text, out int targetSize) ? targetSize : 50,
                     IsEndurance = (selectedMode == "Endurance"),
                     TimeOfDay = comboTimeOfDay.SelectedItem?.ToString() ?? "Day",
-                    PlayerSpeed = trackPlayerSpeed.Value
+                    PlayerSpeed = trackPlayerSpeed.Value,
+                    Difficulty = comboDifficulty.SelectedItem?.ToString() ?? "Normal"
                 };
 
                 string jsonString = JsonSerializer.Serialize(settings);
